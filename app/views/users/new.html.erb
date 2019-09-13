@@ -1,0 +1,13 @@
+<div>
+
+<%= form_for(@user) do |u| %>
+    <%= u.text_field :first, :placeholder => "First Name" %>
+    <%= u.text_field :last, :placeholder => "Last Name" %>
+    <%= u.text_field :email, :placeholder => "Email" %>
+    <%= u.password_field :password, :placeholder => "Password" %>
+    <%= u.submit "Sign Up"%>
+<%end%>
+
+<%= link_to 'Back', posts_path %>
+
+</div>

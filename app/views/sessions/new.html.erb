@@ -1,0 +1,11 @@
+<div>
+
+<%= form_for(:session, url: login_path) do |u| %>
+    <%= u.email_field :email, :placeholder => "Email" %>
+    <%= u.password_field :password, :placeholder => "Password" %>
+    <%= u.submit "Log In"%>
+    <br>
+    <%= link_to 'Back', posts_path %>
+<%end%>
+
+</div>
