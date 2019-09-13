@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Berkley's Blog</h1>
-
     <% @posts.each do |post| %>
        <h2><%= link_to post.title, post %></h2>
        <a href="<%= post_url(post) %>"> <%= image_tag(post.image.tiny.url) %></a>
