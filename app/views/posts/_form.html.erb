@@ -10,23 +10,44 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-8">
+      <div class="form-group">
+        <div class="field">          
+          <%= form.text_field :title, :class => "form-control", :placeholder => "Title" %>
+        </div>
+       
+        <div class="field">
+          <%= form.text_area :description, :class => "form-control", :rows => "2", :placeholder => "Breif Description" %>
+        </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+        <div class="field">          
+          <%= form.text_area :blog_post, :class => "form-control", :rows => "20", :placeholder => "Your amazing blog post..." %>
+        </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
+        <div class="field">
+          <%= form.label :image, :class => "" %>
+          <%= form.file_field :image, :class=>"" %>
+        </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+        <%= form.select :genres, [['1', 'one'],['2','two']] %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+        <select class="field custom-select">
+          <option selected>Open this select menu</option>
+          <option value="kitchen">kitchen</option>
+          <option value="decor">decor</option>
+          <option value="marriage">marriage</option>
+          <option value="life">life</option>
+        </select>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    </div> <!-- end of col-8 -->
+
+    <div class="col-4">
+    </div> <!--end of col-4-->
+
+  </div> <!--end of row-->
 <% end %>
