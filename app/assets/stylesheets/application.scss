@@ -16,8 +16,17 @@
 
  @import "bootstrap";
 
+ .bg-primary {
+    background-image: linear-gradient(to bottom right, purple, blue);
+ }
+ .logo {
+     color:rgb(255,255,255);
+     opacity:0.8;
+     font-family: cormorant
+ }
+
  .main-body {
-     padding-top: 5em;
+     padding-top: 5.5em;
      
  }
 
