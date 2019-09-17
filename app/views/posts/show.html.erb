@@ -1,18 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= @post.title %></strong>
-</p>
+<div class="row">
+  <div class="col-8">
+    <div class="blog-post">
+      <p>
+        <h2 class="blog-header"><strong><%= @post.title %></strong></h2>
+      </p>
 
-<p>  
-  <%= image_tag(@post.image.profile_size.url) %>
-  <br>
-  <i><%= @post.description %></i>
-</p>
+      <p class="blog-img">  
+        <%= image_tag(@post.image.profile_size.url) %>
+        <br>
+        <i class="blog-caption"><%= @post.description %></i>
+      </p>
 
-<p>
-  <%= @post.blog_post %>
-</p>
+      <p class="blog-body">
+        <%= @post.blog_post %>
+      </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      <%= link_to 'Edit', edit_post_path(@post) %> 
+      <%= link_to 'Back', posts_path %>
+    </div>
+  </div> <!-- end col-8 -->
+
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag("berk.jpg", :class => "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">About the Author</h5>
+        <p class="card-text">Meet Berkley, a fun, loving, and creative individual. Who aspires to inspire others with her day to day life!</p>
+        <a href="#" class="btn btn-primary">More...</a>
+      </div>
+    </div>
+  </div> <!-- end col-4 -->
+
+</div>

@@ -17,6 +17,22 @@
  @import "bootstrap";
 
  .main-body {
-     padding: 7%;
+     padding-top: 5em;
      
  }
+
+ /* Blog Elements */
+    .blog-header{
+        text-align: center
+    }
+
+    .blog-img {
+        float: right;
+        margin-left: 3%
+    }
+
+    .blog-caption {
+    }
+
+    .blog-body {     
+    }
