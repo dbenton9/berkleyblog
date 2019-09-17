@@ -30,15 +30,12 @@
           <%= form.file_field :image, :class=>"" %>
         </div>
 
-        <%= form.select :genres, [['1', 'one'],['2','two']] %>
-
-        <select class="field custom-select">
-          <option selected>Open this select menu</option>
-          <option value="kitchen">kitchen</option>
-          <option value="decor">decor</option>
-          <option value="marriage">marriage</option>
-          <option value="life">life</option>
-        </select>
+        <div class="field">
+          <%= form.select(:genres, [['Select Category', ''],['Kitchen', 'Kitchen'],
+                                    ['Marriage','Marriage'],['Decor','Decor'],
+                                    ['Ideas','Ideas']], {}, {:class =>"custom-select"})
+                                    %>
+        </div>
 
         <div class="actions">
           <%= form.submit %>

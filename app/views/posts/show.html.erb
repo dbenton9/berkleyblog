@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <strong><%= @post.title %></strong>
 </p>
 
-<p>
-  <strong>Image:</strong>
+<p>  
   <%= image_tag(@post.image.profile_size.url) %>
+  <br>
+  <i><%= @post.description %></i>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @post.description %>
+  <%= @post.blog_post %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
