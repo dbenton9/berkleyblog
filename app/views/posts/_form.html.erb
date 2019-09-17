@@ -30,6 +30,10 @@
           <%= form.file_field :image, :class=>"" %>
         </div>
 
+        <div class="field"> <!--test genres-->
+          <%= form.text_area :genres, :class => "form-control", :rows => "2", :placeholder => "Breif Description" %>
+        </div>
+
         <!--<div class="field">
           <%= form.select(:genres, [['Select Category', ''],['Kitchen', 'Kitchen'],
                                     ['Marriage','Marriage'],['Decor','Decor'],
