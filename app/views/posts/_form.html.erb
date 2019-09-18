@@ -31,6 +31,13 @@
         </div>
 
         <div class="field"> <!--Select Status-->
+          <div class="field"> Current Status: 
+          <% if post.status %>
+            <%= "Public" %>
+          <% else %>
+            <%= "Draft" %>
+          <% end %>
+          </p>
           <%= form.select :status, [['Draft', false],['Publish', true]], {}, {:class => "custom-select"} %>
         </div>
 

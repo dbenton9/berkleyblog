@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #Posts controller routes
   resources :posts
   root to: "posts#index"
+  get '/public' => 'posts#public'
 
   # Users controller routes
   get '/signup' => 'users#new'
