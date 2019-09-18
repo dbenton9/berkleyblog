@@ -13,35 +13,32 @@
   <div class="row">
     <div class="col-8">
       <div class="form-group">
-        <div class="field">          
+        <div class="field"> <!--Blog Title-->   
           <%= form.text_field :title, :class => "form-control", :placeholder => "Title" %>
         </div>
        
-        <div class="field">
-          <%= form.text_area :description, :class => "form-control", :rows => "1", :placeholder => "Breif Description" %>
+        <div class="field"> <!--Caption Picture-->
+          <%= form.text_area :description, :class => "form-control", :rows => "1", :placeholder => "Caption" %>
         </div>
 
-        <div class="field">          
+        <div class="field"> <!--Blog Post-->         
           <%= form.text_area :blog_post, :class => "form-control", :rows => "20", :placeholder => "Your amazing blog post..." %>
         </div>
 
-        <div class="field">
+        <div class="field"> <!--Select Img-->
           <%= form.label :image, :class => "" %>
           <%= form.file_field :image, :class=>"" %>
         </div>
 
-        <div class="field"> <!--test genres-->
+        <div class="field"> <!--Select Status-->
+          <%= form.select :status, [['Draft', false],['Publish', true]], {}, {:class => "custom-select"} %>
+        </div>
+
+        <div class="field"> <!--Select Genres-->
           <%= form.select :genres, [['Choose Category',''],['Marriage','Marriage'],['Kitchen','Kitchen'],['Decor','Decor']], {}, {:class => "custom-select"} %>
         </div>
 
-        <!--<div class="field">
-          <%= form.select(:genres, [['Select Category', ''],['Kitchen', 'Kitchen'],
-                                    ['Marriage','Marriage'],['Decor','Decor'],
-                                    ['Ideas','Ideas']], {}, {:class =>"custom-select"})
-                                    %>
-        </div>-->
-
-        <div class="actions">
+        <div class="actions"> <!--Submit-->
           <%= form.submit %>
         </div>
       </div>
@@ -51,4 +48,4 @@
     </div> <!--end of col-4-->
 
   </div> <!--end of row-->
-<% end %>
+<% end %> <!--end of form_with-->
