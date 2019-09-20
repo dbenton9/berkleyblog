@@ -5,19 +5,31 @@
     <%= select "post", "genres", options_for_select(['Marriage','Kitchen','Decor']), {prompt: 'Select Category'}, :onchange => 'submit()' %>
     <%= link_to 'Reset', posts_path %>
   <% end %>
+  <hr>
 
-    <% @posts.each do |post| %>
-       <h2><%= link_to post.title, post %></h2>
-       <a href="<%= post_url(post) %>" class=""> <%= image_tag(post.image.tiny.url) %></a>
-       <%= post.description %>
-       <%= post.genres %>
-       <br>
-       <% if current_user %>
-       <%= link_to 'Edit', edit_post_path(post) %>
-       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-       <% end %>
-      <hr>  
-    <% end %>
+  <div class="container-fluid">
+    <div class="row">
+      <% @posts.each do |post| %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="<%= post_url(post) %>" class="">
+            
+              <div class="card">
+                <h2><%= post.title%></h2>
+                <div class="card-holder">
+                <%= image_tag(post.image.menu.url, :class => "list-image") %>        
+                </div>                  
+              </div>
+            
+            </a>
+          <br>
+            <% if current_user %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </div> 
+      <% end %>
+    </div>
+  </div>
 
 <br>
 
