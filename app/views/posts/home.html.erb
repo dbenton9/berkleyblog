@@ -22,21 +22,21 @@
 </div>
 <div class="row">
     <div class='col-lg-6 col-md-6 col-sm-12'>
-        <a href="<%= post_url(@newest) %>" class="">
+        <a href="<%= post_url(@marriage) %>" class="">
             <div class="card">
-                <h2><%= @newest.title%></h2>
+                <h2><%= @marriage.title%></h2>
                 <div class="card-holder">
-                    <%= image_tag(@newest.image.menu.url, :class => "list-image") %>        
+                    <%= image_tag(@marriage.image.menu.url, :class => "list-image") %>        
                 </div>                  
             </div>
         </a>
     </div> <!-- end of col -->
     <div class='col-lg-6 col-md-6 col-sm-12'>
-        <a href="<%= post_url(@newest) %>" class="">
+        <a href="<%= post_url(@home) %>" class="">
             <div class="card">
-                <h2><%= @newest.title%></h2>
+                <h2><%= @home.title%></h2>
                 <div class="card-holder">
-                    <%= image_tag(@newest.image.menu.url, :class => "list-image") %>        
+                    <%= image_tag(@home.image.menu.url, :class => "list-image") %>        
                 </div>                  
             </div>
         </a>

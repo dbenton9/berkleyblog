@@ -19,6 +19,8 @@ class PostsController < ApplicationController
 
   def home
     @newest = Post.last
+    @marriage = Post.where(genres: "Marriage").last
+    @home = Post.where(genres: "Decor").last
   end
 
   # GET /posts/1
