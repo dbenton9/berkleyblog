@@ -2,10 +2,11 @@ Rails.application.routes.draw do
 
   #Posts controller routes
   resources :posts
-  # root to: "posts#index"
-  root to: "posts#public"
+  root to: "posts#index"
+  # root to: "posts#public"
   get '/public' => 'posts#public'
   get '/posts' => 'posts#index'
+  get '/home' => 'posts#home'
 
   # Users controller routes
   get '/signup' => 'users#new'

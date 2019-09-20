@@ -17,6 +17,10 @@ class PostsController < ApplicationController
     @posts = Post.where(status: true)
   end
 
+  def home
+    @newest = Post.last
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
