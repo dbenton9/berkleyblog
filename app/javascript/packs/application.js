@@ -24,4 +24,19 @@ require("bootstrap/dist/js/bootstrap")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+// Dynamic Header on Scroll
+$(window).scroll(function () {
+    if ($(document).scrollTop() == 0) {
+        $('#header-nav').removeClass('tiny');
+        $('#logo-container').fadeIn("slow");   
+    } else {
+        $('#header-nav').addClass('tiny');
+        $('#logo-container').fadeOut();
+    }
+});
 
+// Fixing .main-body beneath .header
+$(document).ready(function() {
+    var contentPlacement = $('.header').position().top + $('.header').height();
+    $('.main-body').css('margin-top', contentPlacement*1.1);
+})
