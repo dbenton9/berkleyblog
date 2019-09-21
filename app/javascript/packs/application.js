@@ -35,8 +35,10 @@ $(window).scroll(function () {
     }
 });
 
-// Fixing .main-body beneath .header
-$(document).ready(function() {
-    var contentPlacement = $('.header').position().top + $('.header').height();
-    $('.main-body').css('margin-top', contentPlacement*1.1);
-})
+// trigger adjusts .main-body beneath .header based off header height currently using fixed margin 200px for this 
+// $(document).ready(function() {
+//     var contentPlacement = $('.header').position().top + $('.header').height();
+//     $('.main-body').css('margin-top', contentPlacement);
+//     console.log(contentPlacement)
+// })
+
