@@ -65,20 +65,20 @@
     </div>
 
     <!-- Page Footer -->
-    <footer class="footer py-4 bg-dark text-white-50">
+    <div id="bottom-footer"class="footer py-4 bg-dark text-white-50">
       <div class="container text-center">
-        <small>Copyright &copy; Your Website</small>
-        <li>
+        <small>Copyright &copy; Berkley Benton 2019</small>
+        <div>
           <% if current_user %>            
-              <li class="nav-item nav-link">Hi <%= current_user.first %></li>
-              <li class="nav-item"><%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %></li>              
+              Hi <%= current_user.first %>
+              <%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %>           
           <% else %>
-              <li class="nav-item"><%= link_to "Log In", 'login', :class => 'btn' %></li>
-              <li class="nav-item"><%= link_to "Sign Up", 'signup', :class => 'btn'%></li>              
+              <%= link_to "Log In", 'login', :class => 'btn' %>
+              <%= link_to "Sign Up", 'signup', :class => 'btn'%>            
           <%end%>
-        </li>
+        </div>
       </div>
-    </footer>
+    </div>
 
     
   </body>
