@@ -14,6 +14,7 @@
           <a href="<%= post_url(post) %>" class="">
             
               <div class="card">
+                <h6><%= post.created_at.strftime("%B %d") %></h6>
                 <h2><%= post.title%> <%=post.genres%></h2>
                 <div class="card-holder">
                 <%= image_tag(post.image.menu.url, :class => "list-image") %>        

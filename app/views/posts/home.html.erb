@@ -2,6 +2,7 @@
     <div class='col-sm-8'>
         <a href="<%= post_url(@newest) %>" class="">
             <div class="card">
+                <h6><%= @newest.created_at.strftime("%B %d") %></h6>
                 <h2><%= @newest.title%></h2>
                 <div class="card-holder">
                     <%= image_tag(@newest.image.menu.url, :class => "list-image") %>        
@@ -24,6 +25,7 @@
     <div class='col-lg-6 col-md-6 col-sm-12'>
         <a href="<%= post_url(@marriage) %>" class="">
             <div class="card">
+                <h6><%= @marriage.created_at.strftime("%B %d") %></h6>
                 <h2><%= @marriage.title%></h2>
                 <div class="card-holder">
                     <%= image_tag(@marriage.image.menu.url, :class => "list-image") %>        
@@ -34,6 +36,7 @@
     <div class='col-lg-6 col-md-6 col-sm-12'>
         <a href="<%= post_url(@home) %>" class="">
             <div class="card">
+                <h6><%= @home.created_at.strftime("%B %d") %></h6>
                 <h2><%= @home.title%></h2>
                 <div class="card-holder">
                     <%= image_tag(@home.image.menu.url, :class => "list-image") %>        
