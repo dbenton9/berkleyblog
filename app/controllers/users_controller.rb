@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :require_user, only: [:new, :create]
+
     def new
         @user = User.new
     end

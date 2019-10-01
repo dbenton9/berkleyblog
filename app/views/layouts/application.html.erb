@@ -74,6 +74,7 @@
               <%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %>           
           <% else %>
               <%= link_to "Log In", 'login', :class => 'btn' %>
+              <!-- currently set so no one can sign up unless they already have an account essentially blocking new users-->
               <%= link_to "Sign Up", 'signup', :class => 'btn'%>            
           <%end%>
         </div>
