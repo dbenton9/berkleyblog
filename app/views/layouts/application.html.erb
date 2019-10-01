@@ -32,22 +32,16 @@
             <ul class="navbar-nav w-100 justify-content-center">
               <li class="nav-item">
                 <%= link_to "Home", home_path, :class => "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Yummies", root_path, :class => "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Adventures", root_path, :class => "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Marriage", root_path, :class => "nav-link" %>
               </li> 
+              <!-- Creating Links that will filter data-->
+              <%['Adventures', 'Marriage', 'Kitchen', 'Decor'].each do |genre| %>
+                <li class="nav-item">
+                  <%= link_to genre, post_genre_path(genre: genre), :class => "nav-link" %>
+                </li>
+              <%end%>
               <li class="nav-item">
-                <%= link_to "Decor", root_path, :class => "nav-link" %>
-              </li> 
-              <li class="nav-item">
-                <%= link_to "About Us", root_path, :class => "nav-link" %>
-              </li>                             
+                <%= link_to "About Us", home_path, :class => "nav-link" %>
+              </li>                     
             </ul>
 
           </div>

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   #Posts controller routes
   resources :posts
-  root to: "posts#index"
+  root to: "posts#home"
   # root to: "posts#public"
-  get '/public' => 'posts#public'
+  get '/public/:genre' => 'posts#public', as: :post_genre
   get '/posts' => 'posts#index'
   get '/home' => 'posts#home'
 

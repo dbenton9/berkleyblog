@@ -14,7 +14,12 @@ class PostsController < ApplicationController
   end
 
   def public
-    @posts = Post.where(status: true)
+    # ***** fix so blank input in route wont crash site****
+    if params[:genre] == nil
+      @posts =Post.where(status:true)
+    else
+      @posts = Post.where(status: true, genres: params[:genre])
+    end
   end
 
   def home
