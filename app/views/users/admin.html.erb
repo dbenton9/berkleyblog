@@ -1,0 +1,14 @@
+<% @users.each do |user| %> 
+    <%= form_with(model: user, local: true) do |form|%>
+        <div class="card">
+            First: <%= form.text_field :first %> 
+            Last: <%= form.text_field :last %>
+            Email: <%= form.text_field :email %>
+            Role: <%= form.select :role, ['subscriber','editor','admin'], {}, {:class => "custom-select"} %>
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <%= form.submit %>
+    <% end %>
+<% end %>
+
+<%= link_to 'back', profile_path%>

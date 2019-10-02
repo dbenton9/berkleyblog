@@ -1,2 +1,6 @@
 <p> Hello <%= current_user.first%> <%= current_user.last %></p>
 <p> Role: <%= current_user.role %></p>
+
+<% if current_user.role == 'admin' %>
+<%= link_to "Admin", admin_path, :class => 'btn'%>
+<% end %>

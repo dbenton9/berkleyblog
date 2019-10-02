@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   resources :users
   get '/profile' => 'users#profile'
+  get '/admin' => 'users#admin'
 
   #Sessions controller routes
   get     '/login' => 'sessions#new'
