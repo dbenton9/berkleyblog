@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :require_admin, only: [:admin]
+    before_action :require_admin, only: [:admin, :create]
     before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def admin
