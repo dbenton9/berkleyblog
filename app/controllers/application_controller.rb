@@ -27,12 +27,12 @@ class ApplicationController < ActionController::Base
 
     # checks to see if editor
     def require_editor
-        not_found '/' unless current_user.editor? || current_user.admin?
+        not_found unless current_user.editor? || current_user.admin?
     end
 
     # checks to see if subscriber
     def require_subscriber
-        not_found '/' unless current_user.subscriber? || current_user.editor? || current_user.admin?
+        not_found unless current_user.subscriber? || current_user.editor? || current_user.admin?
     end
 
 end
