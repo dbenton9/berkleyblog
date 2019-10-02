@@ -65,11 +65,12 @@
         <div>
           <% if current_user %>            
               Hi <%= current_user.first %>
+              <%= link_to "Profile", profile_path, :class => 'btn' %>           
               <%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %>           
           <% else %>
-              <%= link_to "Log In", 'login', :class => 'btn' %>
+              <%= link_to "Log In", login_path, :class => 'btn' %>
               <!-- currently set so no one can sign up unless they already have an account essentially blocking new users-->
-              <%= link_to "Sign Up", 'signup', :class => 'btn'%>            
+              <%= link_to "Sign Up", signup_path, :class => 'btn'%>            
           <%end%>
         </div>
       </div>

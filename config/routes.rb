@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #Posts controller routes
   resources :posts
   root to: "posts#home"
-  # root to: "posts#public"
+  get '/public' => 'posts#public'
   get '/public/:genre' => 'posts#public', as: :post_genre
   get '/posts' => 'posts#index'
   get '/home' => 'posts#home'
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # Users controller routes
   get '/signup' => 'users#new'
   resources :users
+  get '/profile' => 'users#profile'
 
   #Sessions controller routes
   get     '/login' => 'sessions#new'
