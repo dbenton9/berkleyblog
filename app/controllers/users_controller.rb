@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
-    before_action :require_admin, only: [:admin, :create]
+    before_action :require_admin, only: [:admin]
     before_action :set_user, only: [:show, :edit, :update, :destroy]
+    
 
     def admin
         @users = User.all 
@@ -21,11 +22,15 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        if @user.save
-            session[:user_id] = @user.id
-            redirect_to '/'
-        else
-            redirect_to '/signup'
+       binding.pry
+        respond_to do |format|
+            if @user.save
+                session[:user_id] = @user.id
+                redirect_to '/'
+            else
+                format.html { render :new }
+                #format.json { render json: @user.errors, status: :unprocessable_entity }
+            end
         end
     end
 
@@ -46,7 +51,8 @@ class UsersController < ApplicationController
           format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
           format.json { head :no_content }
         end
-      end
+    end
+
     private
         # used to identify individual user for showing, editing, updating, and deleting
         def set_user

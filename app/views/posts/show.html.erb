@@ -7,11 +7,14 @@
         <h2 class="blog-header"><strong><%= @post.title %></strong></h2>
       </p>
 
-      <p class="blog-img">  
-        <%= image_tag(@post.image.profile_size.url) %>
-        <br>
-        <i class="blog-caption"><%= @post.description %></i>
-      </p>
+      <% @post.images.each do |image| %>
+        <p class="blog-img">  
+          <%= image_tag(image.profile_size.url) %>
+          
+          <br>
+          <i class="blog-caption"><%= @post.description %></i>
+        </p>
+      <% end %>
 
       <p class="blog-body">
         <%= @post.blog_post %>

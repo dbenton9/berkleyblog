@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     end
 
     ##### ROLES (admin, editor, subscriber) #####
-    ##### Note heichary, admin has editor and subscriber privileges 
+    ##### Note heichary, admin has editor and subscriber privileges #####
 
     # checks to see if admin
     def require_admin

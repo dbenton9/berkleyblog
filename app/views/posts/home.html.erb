@@ -5,7 +5,7 @@
                 <h6><%= @newest.created_at.strftime("%B %d") %></h6>
                 <h2><%= @newest.title%></h2>
                 <div class="card-holder">
-                    <%= image_tag(@newest.image.menu.url, :class => "list-image") %>        
+                    <%= image_tag(@newest.images[0].menu.url, :class => "list-image") %>        
                 </div>                  
             </div>
         </a>
@@ -28,7 +28,7 @@
                 <h6><%= @marriage.created_at.strftime("%B %d") %></h6>
                 <h2><%= @marriage.title%></h2>
                 <div class="card-holder">
-                    <%= image_tag(@marriage.image.menu.url, :class => "list-image") %>        
+                    <%= image_tag(@marriage.images[0].menu.url, :class => "list-image") %>        
                 </div>                  
             </div>
         </a>
@@ -39,7 +39,7 @@
                 <h6><%= @home.created_at.strftime("%B %d") %></h6>
                 <h2><%= @home.title%></h2>
                 <div class="card-holder">
-                    <%= image_tag(@home.image.menu.url, :class => "list-image") %>        
+                    <%= image_tag(@home.images[0].menu.url, :class => "list-image") %>        
                 </div>                  
             </div>
         </a>

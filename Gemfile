@@ -70,3 +70,8 @@ gem 'fog'
 gem 'figaro'
 gem 'unf'
 
+# formatting
+gem 'awesome_print'
+
+#debugging
+gem 'pry', '~> 0.12.2'

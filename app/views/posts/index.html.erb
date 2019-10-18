@@ -17,7 +17,7 @@
                 <h6><%= post.created_at.strftime("%B %d") %></h6>
                 <h2><%= post.title%> <%=post.genres%></h2>
                 <div class="card-holder">
-                <%= image_tag(post.image.menu.url, :class => "list-image") %>        
+                <%= image_tag(post.images[0].menu.url, :class => "list-image") %>        
                 </div>                  
               </div>
             

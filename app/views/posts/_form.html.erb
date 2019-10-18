@@ -26,8 +26,11 @@
         </div>
 
         <div class="field"> <!--Select Img-->
-          <%= form.label :image, :class => "" %>
-          <%= form.file_field :image, :class=>"" %>
+          <%= form.label :images, :class => "" %>
+          <% post.images.each do |image| %>
+            <%= hidden_field :post, :images, multiple: true, value: image.identifier %>
+          <% end %>
+          <%= form.file_field :images, multiple:true, :class=>"" %>
         </div>
 
         <div class="field"> <!--Select Status-->
