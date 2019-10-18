@@ -75,3 +75,5 @@ gem 'awesome_print'
 
 #debugging
 gem 'pry', '~> 0.12.2'
+
+gem 'rubyzip', '~> 2.0.0'
