@@ -3,12 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+require("@rails/ujs").start();
+require("turbolinks").start();
+require("@rails/activestorage").start();
+require("channels");
 
-require("bootstrap/dist/js/bootstrap")
+require("bootstrap/dist/js/bootstrap");
 
 //= require jquery3
 //= require popper
@@ -25,20 +25,22 @@ require("bootstrap/dist/js/bootstrap")
 // const imagePath = (name) => images(name, true)
 
 // Dynamic Header on Scroll
-$(window).scroll(function () {
-    if ($(document).scrollTop() == 0) {
-        $('#header-nav').removeClass('tiny');
-        $('#logo-container').fadeIn("slow");   
-    } else {
-        $('#header-nav').addClass('tiny');
-        $('#logo-container').fadeOut();
-    }
+$(window).scroll(function() {
+  if ($(document).scrollTop() == 0) {
+    $("#header-nav").removeClass("tiny");
+    $("#logo-container").fadeIn("slow");
+  } else {
+    $("#header-nav").addClass("tiny");
+    $("#logo-container").fadeOut();
+  }
 });
 
-// trigger adjusts .main-body beneath .header based off header height currently using fixed margin 200px for this 
+// trigger adjusts .main-body beneath .header based off header height currently using fixed margin 200px for this
 // $(document).ready(function() {
 //     var contentPlacement = $('.header').position().top + $('.header').height();
 //     $('.main-body').css('margin-top', contentPlacement);
 //     console.log(contentPlacement)
 // })
 
+require("trix")
+require("@rails/actiontext")
